@@ -1,80 +1,82 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SIRIUS ELEC | Électricien à Clamart</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | SIRIUS ELEC</title>
+
+  <meta name="description" content="Contactez SIRIUS ELEC pour vos projets d’électricité générale à Clamart et alentours. Devis et renseignements.">
 
   <style>
     body {
       margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background-color: #f8fafc;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
       color: #1f2937;
-      line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
+      background: #0f172a;
       color: white;
-      padding: 60px 20px;
+      padding: 30px;
       text-align: center;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 42px;
-      letter-spacing: 2px;
-    }
-
-    header p {
-      margin-top: 10px;
-      font-size: 18px;
-      opacity: 0.9;
-    }
-
-    section {
+    main {
       max-width: 1000px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 40px 20px;
     }
 
-    h2 {
-      color: #0f172a;
-      margin-bottom: 15px;
+    h1 {
+      margin-bottom: 10px;
     }
 
-    .services {
+    .contact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
     }
 
-    .card {
+    .box {
       background: white;
       padding: 25px;
       border-radius: 10px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
     }
 
-    .card h3 {
-      margin-top: 0;
-      color: #1e293b;
-    }
-
-    .contact {
-      background: #e5e7eb;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .contact a {
-      display: inline-block;
-      margin-top: 10px;
-      color: #0f172a;
+    label {
+      display: block;
+      margin-top: 15px;
       font-weight: bold;
-      text-decoration: none;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 20px;
+      background: #0f172a;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    iframe {
+      width: 100%;
+      height: 250px;
+      border: 0;
+      border-radius: 10px;
+      margin-top: 20px;
     }
 
     footer {
@@ -84,65 +86,82 @@
       padding: 20px;
       font-size: 14px;
     }
+
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 
 <body>
 
 <header>
-  <h1>SIRIUS ELEC</h1>
-  <p>Électricité générale • Installation • Dépannage • Mise aux normes</p>
+  <h1>Contact</h1>
+  <p>Contactez-nous pour toute information ou demande de devis</p>
 </header>
 
-<section>
-  <h2>À propos</h2>
-  <p>
-    SIRIUS ELEC est une entreprise d’électricité basée à Clamart.
-    Nous accompagnons particuliers et professionnels pour tous travaux
-    électriques, avec sérieux, sécurité et réactivité.
-  </p>
-</section>
+<main>
 
-<section>
-  <h2>Nos services</h2>
-  <div class="services">
-    <div class="card">
-      <h3>Installation électrique</h3>
-      <p>Installations neuves et rénovations complètes, conformes aux normes en vigueur.</p>
+  <div class="contact-grid">
+
+    <!-- INFOS -->
+    <div class="box">
+      <h2>SIRIUS ELEC</h2>
+      <p>
+        📍 3 route de Pavé Blanc<br>
+        92140 Clamart – France
+      </p>
+      <p>
+        📧 <a href="mailto:contact@siriuselec.fr">contact@siriuselec.fr</a>
+      </p>
+      <p>Disponibilité : 7j/7</p>
+
+      <iframe
+        src="https://www.google.com/maps?q=3%20route%20de%20Pav%C3%A9%20Blanc%2092140%20Clamart&output=embed"
+        loading="lazy">
+      </iframe>
     </div>
-    <div class="card">
-      <h3>Dépannage</h3>
-      <p>Intervention rapide en cas de panne ou dysfonctionnement électrique.</p>
+
+    <!-- FORMULAIRE -->
+    <div class="box">
+      <h2>Formulaire de contact</h2>
+
+      <form action="mailto:contact@siriuselec.fr" method="post" enctype="text/plain">
+        <label>Nom *</label>
+        <input type="text" name="Nom" required>
+
+        <label>Prénom *</label>
+        <input type="text" name="Prénom" required>
+
+        <label>Email *</label>
+        <input type="email" name="Email" required>
+
+        <label>Téléphone</label>
+        <input type="tel" name="Téléphone">
+
+        <label>Objet *</label>
+        <select name="Objet" required>
+          <option value="">Choisir</option>
+          <option>Demande de renseignement</option>
+          <option>Demande de devis</option>
+        </select>
+
+        <label>Message *</label>
+        <textarea rows="5" name="Message" required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
     </div>
-    <div class="card">
-      <h3>Mise aux normes</h3>
-      <p>Sécurisation et mise en conformité de vos installations électriques.</p>
-    </div>
-    <div class="card">
-      <h3>Éclairage</h3>
-      <p>Éclairage intérieur et extérieur, solutions modernes et économiques.</p>
-    </div>
+
   </div>
-</section>
 
-<section>
-  <h2>Zone d’intervention</h2>
-  <p>📍 3 route de Pavé Blanc, 92140 Clamart  
-  <br>Interventions à Clamart et alentours.</p>
-</section>
-
-<section>
-  <h2>Contact</h2>
-  <div class="contact">
-    <p>📧 Email professionnel</p>
-    <a href="mailto:contact@siriuselec.fr">contact@siriuselec.fr</a>
-    <p>Disponibilité 7j/7</p>
-  </div>
-</section>
+</main>
 
 <footer>
   <p>© SIRIUS ELEC – Tous droits réservés</p>
-  <p>Informations non diffusables</p>
+  <p>Mentions légales • Politique de confidentialité</p>
 </footer>
 
 </body>
